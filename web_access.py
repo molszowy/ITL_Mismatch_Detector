@@ -49,7 +49,7 @@ async def is_web_enabled(session:aiohttp.ClientSession, device:Device) -> Device
     print(f'Testing device: {device.name} {device.ip_address}')
 
     try:
-        async with session.get(f'http://{device.ip_address}', timeout=30) as resp:
+        async with session.get(f'http://{device.ip_address}', timeout=5) as resp:
             if resp.status == 200:
                 device.web_access = True
                 return device

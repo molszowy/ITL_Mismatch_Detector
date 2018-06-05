@@ -25,7 +25,7 @@ class Device:
         self.web_access = web_access
 
     def __repr__(self):
-        return f'Device(name: {self.name}, ip_address: {self.ip_address}, web_access: {self.web_access})'
+        return f'Device(name: {self.name}, ip_address: {self.ip_address})'
 
 
 async def get_device_names(username: str, password: str, axl_url: str) -> list:
