@@ -45,9 +45,14 @@ API Username:admin
 API Password:pass123
 The connection/authentication to 1.1.1.1 was successful.
 Enable the web access on all devices, restart them and when ready, type "y": y
-Gathered 2 phones via AXL.
-The number of registered devices: 1.
-Do you want to proceed with web access checks for all registered devices ? Type "y": y
-Testing device: SEPxxxxxx 10.10.10.10
-The list of devices with potential ITL mismatches: [Device(name: SEPxxxxxx, ip_address: 10.10.10.10, web_access: False)]
+Device Names via AXL: 10.
+Registered devices: 2.
+(manual step) ENABLE the web access on all devices, restart them and when all registered back, type "y": y
+Testing device: SEPXXXXXXXXA 10.10.10.1
+Testing device: SEPXXXXXXXXB 10.10.10.2
+(manual step) DISABLE the web access on all devices, restart them and when all registered back, type "y": y
+Testing device: SEPXXXXXXXXA 10.10.10.1
+Testing device: SEPXXXXXXXXB 10.10.10.2
+Detected 1 device(s) with potential ITL mismatches!
+Saved devices into devices_with_itl_mismatches.csv
 ```

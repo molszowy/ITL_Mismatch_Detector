@@ -42,16 +42,16 @@ async def main():
     ## Fetch registered devices(AXL/RIS)
 
     device_names = await get_device_names(username, password, axl_url)
-    logger.info('Gathered %s phones via AXL: %s', len(device_names), device_names)
-    print(f'Gathered {len(device_names)} phones via AXL.')
+    logger.info('Gathered %s devices via AXL: %s', len(device_names), device_names)
+    print(f'Device Names via AXL: {len(device_names)}.')
 
     if not device_names:
         print('No devices found!')
         return
 
     registered_devices = await get_registered_devices(username, password, ris_url, device_names)
-    logger.info('Gathered %s phones registered: %s', len(registered_devices), registered_devices)
-    print(f'The number of registered devices: {len(registered_devices)}.')
+    logger.info('Gathered %s devices registered: %s', len(registered_devices), registered_devices)
+    print(f'Registered devices: {len(registered_devices)}.')
 
     if not registered_devices:
         print('No devices registered!')
@@ -94,7 +94,7 @@ async def main():
         print(f'No ITL mismatches found')
         return
 
-    print(f'Detected {len(itl_mismatches)} devices with potential ITL mismatches!')
+    print(f'Detected {len(itl_mismatches)} device(s) with potential ITL mismatches!')
 
     try:
         with open('devices_with_itl_mismatches.csv', newline='', mode='w') as csvfile:
