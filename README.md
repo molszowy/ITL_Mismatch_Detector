@@ -19,11 +19,11 @@ The script works in the following way:
 
 * Connects to the AXL(Administrative XML) API in order to fetch configured phones and their names(listPhone operation) 
 * Connects to the RIS(Real-Time Information Service) API in order to fetch IP addresses of registered devices
-* Asks to ENABLE the web interface on all phones, reset and wait for them to register back(manual step)
+* Prompts to ENABLE the web interface on all phones, reset and wait for them to register back(manual step)
 * Checks connectivity(web interface - HTTP only) to all registered phones.
 * If the web interface is NOT ENABLED after the configuration change,
 it's a potential ITL mismatch - the phone does not follow the configuration change.
-* Asks to DISABLE the web interface on all phones, reset and wait for them to register back(manual step)
+* Prompts to DISABLE the web interface on all phones, reset and wait for them to register back(manual step)
 * Checks connectivity(web interface - HTTP only) to all registered phones
 * If the web interface is NOT DISABLED after the configuration change,
 it's a potential ITL mismatch - the phone does not follow the configuration change.
