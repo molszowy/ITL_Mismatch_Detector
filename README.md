@@ -1,10 +1,12 @@
-# ITL_Mismatch_Detector
-This tool connects to CUCM(Cisco Unified Communications Manager) over RIS/AXL APIs and retrives 
-all registered devices in order to detect ITL mismatches.
+# ITL Mismatch Detector
+This tool automates the process to detect ITL(Initial Trust List) mismatches 
+on Cisco IP Phones and Endpoints at scale. 
+It generates devices_with_itl_mismatches.csv file that 
+lists all registered endpoints with suspected mismatches(Device Name / IP address).
 
 
 ### Prerequisites:
-* CUCM version 9+
+* CUCM(Cisco Unified Communications Manager) version 9+
 * AXL service activated on the publisher(Cisco Unified Serviceability)
 * Admin user with the 'Standard CCM Super Users' Access Group assigned
 * Python 3.6+
